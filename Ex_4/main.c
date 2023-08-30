@@ -1,23 +1,22 @@
 #include <stdio.h>
 
-// Function declaration
 int read_integer(void);
 
 int main() {
     int num, count = 0;
     double sum = 0.0;
-    int continueReading = 1; // Control variable for the loop
+    int continueReading = 1;
 
-    // Loop to read integers until a negative number is entered
+    // read integers until a negative number is entered
     while (continueReading) {
         printf("Enter positive numbers or negative to stop: ");
-        num = read_integer(); // Call read_integer function to read an integer
+        num = read_integer();
 
         if (num < 0) {
-            continueReading = 0; // Set control variable to false if a negative number is entered
+            continueReading = 0;
         } else {
-            sum += num; // Add the entered number to the sum
-            count++; // Increment the count of entered numbers
+            sum += num;
+            count++;
         }
     }
 
@@ -32,7 +31,7 @@ int main() {
     return 0;
 }
 
-// Function definition
+
 int read_integer(void) {
     int num;
     int isValid = 0;
@@ -41,7 +40,6 @@ int read_integer(void) {
         if (scanf("%d", &num) == 1) {
             isValid = 1;
         } else {
-            // Clear the input buffer and print an error message
             while (getchar() != '\n');
             printf("invalid input\n");
         }
