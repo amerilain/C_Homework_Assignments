@@ -41,7 +41,7 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /Users/amerilain/Documents/ICT_docs/2nd$ Year/C$ Programming/Exercises/Project$ Files/Ex_6/cmake-build-debug/
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target Ex_6
+# Object build statements for EXECUTABLE target Ex_6
 
 
 #############################################
@@ -49,31 +49,30 @@ cmake_ninja_workdir = /Users/amerilain/Documents/ICT_docs/2nd$ Year/C$ Programmi
 
 build cmake_object_order_depends_target_Ex_6: phony || CMakeFiles/Ex_6.dir
 
-build CMakeFiles/Ex_6.dir/library.c.o: C_COMPILER__Ex_6_unscanned_Debug /Users/amerilain/Documents/ICT_docs/2nd$ Year/C$ Programming/Exercises/Project$ Files/Ex_6/library.c || cmake_object_order_depends_target_Ex_6
-  DEP_FILE = CMakeFiles/Ex_6.dir/library.c.o.d
+build CMakeFiles/Ex_6.dir/main.c.o: C_COMPILER__Ex_6_unscanned_Debug /Users/amerilain/Documents/ICT_docs/2nd$ Year/C$ Programming/Exercises/Project$ Files/Ex_6/main.c || cmake_object_order_depends_target_Ex_6
+  DEP_FILE = CMakeFiles/Ex_6.dir/main.c.o.d
   FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -fcolor-diagnostics
   OBJECT_DIR = CMakeFiles/Ex_6.dir
   OBJECT_FILE_DIR = CMakeFiles/Ex_6.dir
-  TARGET_COMPILE_PDB = CMakeFiles/Ex_6.dir/Ex_6.pdb
-  TARGET_PDB = libEx_6.pdb
+  TARGET_COMPILE_PDB = CMakeFiles/Ex_6.dir/
+  TARGET_PDB = Ex_6.pdb
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target Ex_6
+# Link build statements for EXECUTABLE target Ex_6
 
 
 #############################################
-# Link the static library libEx_6.a
+# Link the executable Ex_6
 
-build libEx_6.a: C_STATIC_LIBRARY_LINKER__Ex_6_Debug CMakeFiles/Ex_6.dir/library.c.o
-  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
-  LANGUAGE_COMPILE_FLAGS = -g
+build Ex_6: C_EXECUTABLE_LINKER__Ex_6_Debug CMakeFiles/Ex_6.dir/main.c.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk
   OBJECT_DIR = CMakeFiles/Ex_6.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/Ex_6.dir/Ex_6.pdb
-  TARGET_FILE = libEx_6.a
-  TARGET_PDB = libEx_6.pdb
+  TARGET_COMPILE_PDB = CMakeFiles/Ex_6.dir/
+  TARGET_FILE = Ex_6
+  TARGET_PDB = Ex_6.pdb
 
 
 #############################################
@@ -101,8 +100,6 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Ex_6: phony libEx_6.a
-
 # =============================================================================
 # Folder targets.
 
@@ -111,7 +108,7 @@ build Ex_6: phony libEx_6.a
 #############################################
 # Folder: /Users/amerilain/Documents/ICT_docs/2nd Year/C Programming/Exercises/Project Files/Ex_6/cmake-build-debug
 
-build all: phony libEx_6.a
+build all: phony Ex_6
 
 # =============================================================================
 # Built-in targets
