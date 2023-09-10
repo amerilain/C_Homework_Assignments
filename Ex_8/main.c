@@ -21,6 +21,6 @@ int main(void) {
 
 void print_numbers(const int *array, int count) {
     for (int i = 0; i < count; i++) {
-        printf("%8d\n", array[i] % 100000000);
+        printf("%8d\n", array[i] % 100000000);  // 8 digits
     }
 }
