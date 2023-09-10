@@ -11,8 +11,7 @@ int main(void) {
     int numbers[size];
     srand(time(NULL));
 
-    for (int i = 0; i < size; i++)
-    {
+    for (int i = 0; i < size; i++) {
         numbers[i] = rand();
     }
 
@@ -21,8 +20,7 @@ int main(void) {
 }
 
 void print_numbers(const int *array, int count) {
-    for (int i = 0; i < count; i++)
-    {
+    for (int i = 0; i < count; i++) {
         printf("%8d\n", array[i] % 100000000);
     }
 }
