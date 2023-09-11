@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_STRING_SIZE 80
+#define maxStringSize 256
 
 int replace_char(char *str, const char *repl);
 
 int main() {
-    char text[MAX_STRING_SIZE];
+    char text[maxStringSize];
     char repl[3];
 
     // User input
-    printf("Enter the string: ");
+    printf("Enter a string: ");
     fgets(text, sizeof(text), stdin);
     text[strcspn(text, "\n")] = '\0'; // Remove newline character
 
-    printf("Enter two characters for replacement (e.g. e3): ");
+    printf("Enter characters to be replaced: ");
     fgets(repl, sizeof(repl), stdin);
     repl[strcspn(repl, "\n")] = '\0';
 
@@ -22,7 +22,7 @@ int main() {
 
     if (count > 0) {
         printf("Number of characters replaced: %d\n", count);
-        printf("Modified string: %s\n", text);
+        printf("String that was modified: %s\n", text);
     } else {
         printf("String was not modified\n");
     }

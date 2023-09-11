@@ -1,19 +1,21 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_STRING_SIZE 256
+#define maxStringSize 256
 
 int main(void) {
-    char userInput[MAX_STRING_SIZE];
+    char userInput[maxStringSize];
     int length;
 
     do {
         printf("Please enter a string: ");
-        fgets(userInput, MAX_STRING_SIZE, stdin);
+        fgets(userInput, maxStringSize, stdin);
         userInput[strcspn(userInput, "\n")] = '\0';
 
-        length = strlen(userInput);
-        printf("Length of the string: %d\n", length);
+        if (strcmp(userInput, "stop") != 0) {
+            length = strlen(userInput);
+            printf("Length of the string: %d\n", length);
+        }
 
     } while (strcmp(userInput, "stop") != 0);
 
