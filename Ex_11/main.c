@@ -12,7 +12,7 @@ int main() {
     // User input
     printf("Enter a string: ");
     fgets(text, sizeof(text), stdin);
-    text[strcspn(text, "\n")] = '\0'; // Remove newline character
+    text[strcspn(text, "\n")] = '\0';
 
     printf("Enter characters to be replaced: ");
     fgets(repl, sizeof(repl), stdin);
