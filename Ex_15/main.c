@@ -34,5 +34,6 @@ int main(void) {
         printf("%8.2lf %s\n", items[i].price, items[i].name);
     }
 
+
     return 0;
 }
