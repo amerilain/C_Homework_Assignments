@@ -20,7 +20,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a07f0e39-987d-498b-99da-467c72b5497a" name="Changes" comment="" />
+    <list default="true" id="a07f0e39-987d-498b-99da-467c72b5497a" name="Changes" comment="few small changes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +81,17 @@
       <updated>1695613758565</updated>
       <workItem from="1695613759746" duration="1210000" />
       <workItem from="1695643277198" duration="2000" />
+      <workItem from="1695734377936" duration="2917000" />
     </task>
+    <task id="LOCAL-00001" summary="few small changes">
+      <option name="closed" value="true" />
+      <created>1695736704295</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695736704295</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,5 +102,9 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticFoundErrors value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="few small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="few small changes" />
   </component>
 </project>
