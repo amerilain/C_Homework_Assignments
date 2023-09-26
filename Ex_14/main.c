@@ -6,50 +6,54 @@
 #define MAX_LINES 100
 
 int main(void) {
-    char lines[MAX_LINES][MAX_LINE_LENGTH + 1]; // +1 for the null terminator
+    char lines[MAX_LINES][MAX_LINE_LENGTH + 1];
+    char line[MAX_LINE_LENGTH + 1];
     int lineCount = 0;
     char filename[256];
 
-    // Ask user for filename
+    // Get the filename from the user
     printf("Enter the filename: ");
     fgets(filename, sizeof(filename), stdin);
-    filename[strcspn(filename, "\n")] = '\0'; // Remove newline character
+    filename[strcspn(filename, "\n")] = '\0';
 
-    // Open file for reading
+    // open the file and return error and exit if it doesn't exist
     FILE *file = fopen(filename, "r");
     if (!file) {
-        fprintf(stderr, "Error: Could not open file %s\n", filename);
+        fprintf(stderr, "Error: Could not open %s\n", filename);
         return 1;
     }
 
-    // Read lines from file
-    while (lineCount < MAX_LINES && fgets(lines[lineCount], MAX_LINE_LENGTH + 1, file)) {
-        lines[lineCount][strcspn(lines[lineCount], "\n")] = '\0'; // Remove newline character
+    // read the file line by line
+    while (lineCount < MAX_LINES && fgets(line, MAX_LINE_LENGTH + 1, file)) {
+        line[strcspn(line, "\n")] = '\0';
+        strcpy(lines[lineCount], line);
         lineCount++;
     }
     fclose(file);
 
-    // Convert to uppercase
-    for (int i = 0; i < lineCount; i++) {
-        for (int j = 0; j < strlen(lines[i]); j++) {
-            lines[i][j] = toupper(lines[i][j]);
+    // convert the lines to uppercase
+    int i, j;
+    for (i = 0; i < lineCount; i++) {
+        int lengthOfCurrentLine = strlen(lines[i]);
+        for (j = 0; j < lengthOfCurrentLine; j++) {
+            char currentCharacter = lines[i][j];
+            char upperCaseCharacter = toupper(currentCharacter);
+            lines[i][j] = upperCaseCharacter;
         }
     }
 
-    // Open file for writing
+    // open the file again for writing updated lines
     file = fopen(filename, "w");
     if (!file) {
-        fprintf(stderr, "Error: Could not open file %s for writing\n", filename);
+        fprintf(stderr, "Error: Couldn't open %s \n", filename);
         return 1;
     }
 
-    // Write lines to file
-    for (int i = 0; i < lineCount; i++) {
+    for (i = 0; i < lineCount; i++) {
         fprintf(file, "%s\n", lines[i]);
     }
     fclose(file);
 
-    printf("File %s has been updated with uppercase letters.\n", filename);
+    printf("%s has been updated with uppercase letters.\n", filename);
     return 0;
 }
-
