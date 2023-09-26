@@ -4,14 +4,16 @@
 int main(void) {
     char filename[256];
     FILE *file;
-    int num, count = 0, min = 0, max = 0, first = 1;
+    int num, count = 0;
+    int min, max = 0;
+    int first = 1;
 
     printf("Enter the filename: ");
     scanf("%255s", filename);
 
     file = fopen(filename, "r");
     if (!file) {
-        fprintf(stderr, "Error: Could not open file %s\n", filename);
+        fprintf(stderr, "Error: Couldn't open file %s\n", filename);
         return 1;
     }
 

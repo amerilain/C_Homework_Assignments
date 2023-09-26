@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.26)
+project(Ex_14 C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(Ex_14 main.c)
