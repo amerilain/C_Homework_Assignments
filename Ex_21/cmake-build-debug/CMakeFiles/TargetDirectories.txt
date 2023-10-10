@@ -1,0 +1,3 @@
+/Users/amerilain/Documents/ICT_docs/2nd_year/C_Programming/Exercises/Project Files/Ex_21/cmake-build-debug/CMakeFiles/Ex_21.dir
+/Users/amerilain/Documents/ICT_docs/2nd_year/C_Programming/Exercises/Project Files/Ex_21/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/amerilain/Documents/ICT_docs/2nd_year/C_Programming/Exercises/Project Files/Ex_21/cmake-build-debug/CMakeFiles/rebuild_cache.dir
